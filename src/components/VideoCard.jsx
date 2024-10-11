@@ -9,7 +9,7 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
   if (!snippet) return null;
 
   return (
-    <Card sx={{ width: { xs: '100%', sm: '358px', md: "320px" }, boxShadow: "none", borderRadius: 0 }}>
+    <Card sx={{ width: { xs: '100%', sm: '358px', md: "320px" }, boxShadow: "none", borderRadius: 5 }}>
       <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY`}>
         <CardMedia
           image={snippet?.thumbnails?.high?.url || demoThumbnailUrl}
@@ -17,9 +17,9 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
           sx={{ width: '100%', height: 180 }} // Ensure 100% width for small screens
         />
       </Link>
-      <CardContent sx={{ backgroundColor: "#161515", height: '106px' }}>
+      <CardContent className='card-content' sx={{height: '106px' }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
-          <Typography variant="subtitle1" fontWeight="bold" color="#FFF">
+          <Typography variant="subtitle1" fontWeight="bold" color="#000000">
             {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
           </Typography>
         </Link>

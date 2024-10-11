@@ -10,9 +10,9 @@ const Videos = ({ videos, direction }) => {
     <Stack
       direction={direction || "row"}
       flexWrap="wrap"
-      justifyContent="start"
+      justifyContent="space-around"
       alignItems="start"
-      gap={2}
+      gap={1}
     >
       {videos.map((item, idx) => {
         if (item.id.videoId || item.id.channelId) {
