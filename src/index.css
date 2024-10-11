@@ -26,7 +26,7 @@ a {
 }
 
 .category-btn:hover {
-  background-color: #FC1503 !important;
+  background-color: #000000 !important;
   color: white !important;
 }
 
@@ -61,7 +61,9 @@ a {
   border-radius: 20px;
   transition: all 0.3s ease;
 }
-
+.copyright{
+  display: none;
+}
 @media screen and (max-width: 900px) {
   .category-btn{
     margin: 10px;
@@ -71,6 +73,9 @@ a {
 @media screen and (max-width:800px){
   .copyright{
     display:none !important;
+  }
+  .osm-tube{
+    display: none;
   }
 }
 
